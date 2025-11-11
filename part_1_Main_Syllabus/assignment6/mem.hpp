@@ -1,26 +1,26 @@
-#ifndef MEM_HPP
-#define MEM_HPP
-
+// mem.hpp
+#pragma once
 #include <vector>
 #include <string>
 
+// Allocation result:
+// - allocation[i] = block index chosen for process i (or -1 if not allocated)
+// - internalFrag[i] = leftover space inside the chosen block for process i
+// - remaining[b] = remaining capacity of block b after all allocations
 struct Result {
-    // For each process i -> index of allocated block (or -1).
-    std::vector<int> alloc;          
-    // Internal fragmentation per process (0 if not allocated)
-    std::vector<int> internalFrag;   
-    // Block remainders after allocation
-    std::vector<int> blockLeft;      
+    std::vector<int> allocation;
+    std::vector<int> internalFrag;
+    std::vector<int> remaining;
 };
 
+// Algorithms
 Result first_fit(const std::vector<int>& blocks, const std::vector<int>& procs);
 Result next_fit (const std::vector<int>& blocks, const std::vector<int>& procs);
 Result best_fit (const std::vector<int>& blocks, const std::vector<int>& procs);
 Result worst_fit(const std::vector<int>& blocks, const std::vector<int>& procs);
 
-void print_result(const std::string& title,
+// Pretty printer (shared)
+void print_result(const std::string& name,
                   const std::vector<int>& blocks,
                   const std::vector<int>& procs,
                   const Result& res);
-
-#endif

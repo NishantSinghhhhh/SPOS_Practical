@@ -1,0 +1,3 @@
+POOL-START-INDICES (0-based into Literal Table)
+0: 0
+1: 1

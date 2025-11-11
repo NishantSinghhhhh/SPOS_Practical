@@ -1,0 +1,2 @@
+LITERAL         VALUE   ADDR    
+=5              5       103     

@@ -149,8 +149,9 @@ void run() {
 } // namespace DP
 
 // expose simple dispatcher for main.cpp
+// expose simple dispatcher for main.cpp
 namespace Problems {
-    inline void run_prodcon() { PC::run(); }
-    inline void run_rw()      { RW::run(); }
-    inline void run_phil()    { DP::run(); }
+    void run_prodcon() { PC::run(); }
+    void run_rw()      { RW::run(); }
+    void run_phil()    { DP::run(); }
 }
