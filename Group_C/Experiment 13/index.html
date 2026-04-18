@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Registration Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f0f0f0;
+            text-align: center;
+        }
+        .box {
+            background: white;
+            width: 400px;
+            margin: 60px auto;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px gray;
+        }
+        input, select {
+            margin: 8px;
+            padding: 6px;
+            width: 220px;
+        }
+        button {
+            padding: 8px 20px;
+            background: #3366cc;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <h2>Registration Form</h2>
+        <form action="RegisterServlet" method="post">
+            Username: <input type="text" name="uname"><br>
+            Email: <input type="email" name="email"><br>
+            Password: <input type="password" name="pass"><br>
+            Country:
+            <select name="country">
+                <option value="India">India</option>
+                <option value="USA">USA</option>
+                <option value="UK">UK</option>
+                <option value="Australia">Australia</option>
+                <option value="Canada">Canada</option>
+            </select><br><br>
+            <button type="submit">Register</button>
+        </form>
+    </div>
+</body>
+</html>

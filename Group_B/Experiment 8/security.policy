@@ -1,0 +1,7 @@
+grant {
+    permission java.net.SocketPermission "localhost:1099", "connect, resolve, accept, listen";
+    permission java.net.SocketPermission "*:1024-65535", "connect, resolve";
+    permission java.io.FilePermission "<<ALL FILES>>", "read, write, execute";
+    permission java.lang.RuntimePermission "createClassLoader";
+    permission java.lang.RuntimePermission "accessClassInPackage.*";
+};
