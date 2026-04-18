@@ -1,1 +1,0 @@
-# SPOS_Practical

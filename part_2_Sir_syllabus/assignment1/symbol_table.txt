@@ -1,3 +1,0 @@
-SYMBOL          ADDR    LEN     
-NUM             105     1       
-VALUE           104     1       
